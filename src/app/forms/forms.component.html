@@ -1,0 +1,25 @@
+<div class="card-container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form">
+      <h2 class="form-title">    <h2>{{'contact_us' | translate}}</h2></h2>
+  
+      <div class="form-group">
+        <label for="name">{{'name' | translate}}</label>
+        <input type="text" id="name" [placeholder]="'enter_your_name'| translate" formControlName="name" class="form-input" />
+        <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.touched || myForm.get('name')?.dirty)" class="error">
+          <ng-container *ngIf="myForm.get('name')?.errors?.['required']">{{'name_is_required' | translate}}</ng-container>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">{{'email' | translate}}</label>
+        <input type="email" id="email" [placeholder]="'enter_your_email'| translate" formControlName="email" class="form-input" />
+        <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)" class="error">
+          <ng-container *ngIf="myForm.get('email')?.errors?.['required']">{{'email_is_required' | translate}}</ng-container>
+          <ng-container *ngIf="myForm.get('email')?.errors?.['email']">{{'email_is_invalid' | translate}}</ng-container>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="myForm.invalid" class="submit-button">{{'submit' | translate}}</button>
+    </form>
+  </div>
+  

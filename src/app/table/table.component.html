@@ -1,0 +1,46 @@
+
+<div class="table-container" *ngIf="!isMobile; else mobileView">
+    <h2>{{'table_data' | translate}}</h2>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Weight</th>
+          <th>Symbol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of paginatedElements">
+          <td>{{element.position}}</td>
+          <td>{{element.name}}</td>
+          <td>{{element.weight}}</td>
+          <td>{{element.symbol}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="pagination">
+      <button (click)="prevPage()" [disabled]="currentPage === 0">Previous</button>
+      <button (click)="nextPage()" [disabled]="currentPage + 1 >= totalPages">Next</button>
+    </div>
+  </div>
+  
+  <!-- Mobile View: Cards instead of table -->
+  <ng-template #mobileView>
+    <h2>{{'card_data' | translate}}</h2>
+    <div class="card-container">
+      <div *ngFor="let element of paginatedElements" class="card">
+        <h3>{{element.name}}</h3>
+        <p>No: {{element.position}}</p>
+        <p>Weight: {{element.weight}}</p>
+        <p>Symbol: {{element.symbol}}</p>
+      </div>
+    </div>
+  
+    <div class="pagination">
+      <button (click)="prevPage()" [disabled]="currentPage === 0">Previous</button>
+      <button (click)="nextPage()" [disabled]="currentPage + 1 >= totalPages">Next</button>
+    </div>
+  </ng-template>
+  

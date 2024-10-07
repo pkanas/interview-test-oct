@@ -1,0 +1,18 @@
+{
+    "tables": "Tables",
+    "forms": "Forms",
+    "charts": "Charts",
+    "table_data": "Table Data",
+    "contact_us": "Contact Us",
+    "line_chart_website_traffic": "Line Chart: Website Traffic Over the Last Week",
+    "bar_chart_sales_performance": "Bar Chart: Sales Performance by Product",
+    "card_data": "Card Data",
+    "name": "Name",
+    "email": "Email",
+    "submit": "Submit",
+    "enter_your_name": "Enter your name",
+    "enter_your_email": "Enter your email",
+    "name_is_required": "Name is required",
+    "email_is_required": "Email is required",
+    "email_is_invalid": "Email is invalid"
+}

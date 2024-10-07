@@ -1,0 +1,18 @@
+{
+    "tables": "Tables",
+    "forms": "Formulaires",
+    "charts": "Graphiques",
+    "table_data": "Données du tableau",
+    "contact_us": "Contactez-nous",
+    "line_chart_website_traffic": "Graphique linéaire : Trafic du site web au cours de la dernière semaine",
+    "bar_chart_sales_performance": "Graphique en barres : Performance des ventes par produit",
+    "card_data": "Données de la carte",
+    "name": "Nom",
+    "email": "Email",
+    "submit": "Soumettre",
+    "enter_your_name": "Entrez votre nom",
+    "enter_your_email": "Entrez votre e-mail",
+    "name_is_required": "Le nom est requis",
+    "email_is_required": "L'email est requis",
+    "email_is_invalid": "L'email est invalide"
+}
